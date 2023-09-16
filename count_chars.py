@@ -3,7 +3,7 @@
 # Ask the user for a string to
 # use to collect the letter counts
 my_string = input("Enter a string = ")
-# Convert to lower-case
+# Convert to lower-case this way since strings are immutable
 my_string = my_string.lower()
 
 # Create empty dictionary. The idea is that
@@ -17,11 +17,11 @@ my_dict = {}
 # character as key, create an entry and assign a value of 1
 # else add 1 to the (existing) dictionary entry
 for a_char in my_string:
-    # if the character isnt in the dictionary add make it 
+    # if the character isnt in the dictionary add it  
     if a_char not in my_dict:
         my_dict[a_char] = 1
     else:
-        # Add 1 to the amount of chars
+        # Add 1 to the char count if it already exists within the dictionary
         my_dict[a_char] += 1
 
 for letter, letter_amount in my_dict.items():
